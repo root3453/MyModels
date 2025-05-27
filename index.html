@@ -1,10 +1,46 @@
 <!DOCTYPE html>
-<html>
-  <head><title>Models</title></head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3D GLB with Parallax</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: #ffffff;
+        color: white;
+        font-family: Arial, sans-serif;
+      }
+      canvas {
+        display: block;
+      }
+      #info {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 10px;
+        background: rgba(f, f, f, 1);
+        border-radius: 5px;
+      }
+      #loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+      }
+    </style>
+  </head>
   <body>
-    <h1>My 3D Files</h1>
-    <ul>
-      <li><a href="_Hand_II_2.glb">_Hand_II_2.glb</a></li>
-    </ul>
+    
+    <div id="loading">Loading 3D model...</div>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/libs/draco/draco_decoder.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/DRACOLoader.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
