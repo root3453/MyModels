@@ -34,7 +34,7 @@ loader.setDRACOLoader(dracoLoader);
 
 // Load GLB model - replace with your own model URL
 loader.load(
-  'https://cdn.glitch.global/d0ef7508-c142-4d8e-8504-dc508219aee9/hand14.glb?v=1748329557457',
+  'models/hand14.glb',
   function (gltf) {
     model = gltf.scene;
     scene.add(model);
