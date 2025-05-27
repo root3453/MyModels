@@ -33,9 +33,8 @@ dracoLoader.setDecoderPath('https://cdn.jsdelivr.net/npm/three@0.132.2/examples/
 loader.setDRACOLoader(dracoLoader);
 
 // Load GLB model - replace with your own model URL
-loader.load(
-  'models/hand14.glb',
-  function (gltf) {
+loader.load('models/hand14.glb', function (gltf) {
+
     model = gltf.scene;
     scene.add(model);
 
