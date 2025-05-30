@@ -9,7 +9,6 @@
         margin: 0;
         overflow: hidden;
         background: #ffffff;
-        color: white;
         font-family: Arial, sans-serif;
       }
       canvas {
@@ -20,8 +19,9 @@
         top: 10px;
         left: 10px;
         padding: 10px;
-        background: rgba(f, f, f, 1);
+        background: rgba(0, 0, 0, 0.7);
         border-radius: 5px;
+        color: white;
       }
       #loading {
         position: absolute;
@@ -29,17 +29,22 @@
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 24px;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
       }
     </style>
   </head>
   <body>
-    
     <div id="loading">Loading 3D model...</div>
+    <div id="info" style="display: none;">
+      Use mouse to rotate | Scroll to zoom
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/libs/draco/draco_decoder.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/DRACOLoader.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/DRACOLoader.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
     <script src="script.js"></script>
   </body>
